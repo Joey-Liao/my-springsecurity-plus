@@ -32,7 +32,8 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
     private String tokenHeader;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
-
+    @Value("${jwt.expiration}")
+    private String expiration;
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
         //拿到登录用户信息
@@ -42,7 +43,7 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
 //      token存入cookie
         Cookie tokenCookie = new Cookie(this.tokenHeader, jwtToken);
         tokenCookie.setPath("/");
-        tokenCookie.setMaxAge(3600 * 2); //有效时间2小时
+        tokenCookie.setMaxAge(Integer.parseInt(this.expiration)); //设置cookie与token的有效时间一致
         httpServletResponse.addCookie(tokenCookie);
 
         HttpSession session = httpServletRequest.getSession();
