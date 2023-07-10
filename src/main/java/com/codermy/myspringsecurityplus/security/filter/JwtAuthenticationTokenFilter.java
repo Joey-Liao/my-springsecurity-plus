@@ -14,6 +14,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -39,15 +40,13 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain chain) throws ServletException, IOException {
-        //拿到requset中的head
-        String authHeader = request.getHeader(this.tokenHeader);
-        if (authHeader != null && authHeader.startsWith(this.tokenHead)) {
-            // The part after "Bearer "
-            String authToken = authHeader.substring(this.tokenHead.length());
+        Cookie[] cookies = request.getCookies();
+        String token = getCookieByName(cookies);
+        if (token != null) {
             //解析token获取用户名
-            String username = jwtUtils.getUserNameFromToken(authToken);
+            String username = jwtUtils.getUserNameFromToken(token);
             log.info("checking username:{}", username);
-            if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+            if (username != null) {
                 UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
                 if (userDetails != null) {
                     UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
@@ -59,5 +58,18 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         }
         chain.doFilter(request, response);
     }
+
+    public String getCookieByName(Cookie[] cookies) {
+        String token = null;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals(this.tokenHeader)) {
+                    token = cookie.getValue();
+                    break;
+                }
+            }
+        }
+        return token;
     }
+}
 
