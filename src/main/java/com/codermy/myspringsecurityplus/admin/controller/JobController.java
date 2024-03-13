@@ -18,8 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author codermy
- * @createTime 2020/8/19
+ *  * 
  */
 @Controller
 @RequestMapping("/api/job")

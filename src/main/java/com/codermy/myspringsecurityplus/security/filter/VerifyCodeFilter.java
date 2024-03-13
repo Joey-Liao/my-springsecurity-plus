@@ -14,8 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * @author codermy
- * @createTime 2020/7/20
+ *  *
  */
 @Component
 public class VerifyCodeFilter extends OncePerRequestFilter {

@@ -2,7 +2,6 @@ package com.codermy.myspringsecurityplus.security.config;
 
 
 import com.codermy.myspringsecurityplus.security.UserDetailsServiceImpl;
-import com.codermy.myspringsecurityplus.security.filter.JwtAuthenticationTokenFilter;
 import com.codermy.myspringsecurityplus.security.filter.VerifyCodeFilter;
 import com.codermy.myspringsecurityplus.security.handler.MyAuthenticationFailureHandler;
 import com.codermy.myspringsecurityplus.security.handler.MyAuthenticationSuccessHandler;
@@ -22,8 +21,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
- * @author codermy
- * @createTime 2020/7/15
+ *  * 
  */
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -61,7 +59,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Autowired
     private RestfulAccessDeniedHandler accessDeniedHandler;
-
 
 
     @Override
@@ -134,7 +131,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 禁用缓存
         http.headers().cacheControl();
-
 
 
         // 无权访问 JSON 格式的数据

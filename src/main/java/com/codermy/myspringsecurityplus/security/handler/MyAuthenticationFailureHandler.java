@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author codermy
- * @createTime 2020/8/2
+ *  *
  */
 @Component
 public class MyAuthenticationFailureHandler implements AuthenticationFailureHandler {

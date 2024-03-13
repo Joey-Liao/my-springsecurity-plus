@@ -5,8 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author codermy
- * @createTime 2020/7/14
+ *  * 
  */
 @Data
 public class UserQueryDto implements Serializable {

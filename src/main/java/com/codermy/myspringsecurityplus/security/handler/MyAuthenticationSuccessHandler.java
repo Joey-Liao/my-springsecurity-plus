@@ -19,8 +19,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * @author codermy
- * @createTime 2020/8/1
+ *  * 
  * 登录成功
  */
 @Component
@@ -34,6 +33,8 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
     private String tokenHead;
     @Value("${jwt.expiration}")
     private String expiration;
+
+
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
         //拿到登录用户信息

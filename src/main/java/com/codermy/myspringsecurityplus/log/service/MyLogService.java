@@ -1,16 +1,15 @@
 package com.codermy.myspringsecurityplus.log.service;
 
+import com.codermy.myspringsecurityplus.common.utils.Result;
 import com.codermy.myspringsecurityplus.log.dto.ErrorLogDto;
 import com.codermy.myspringsecurityplus.log.dto.LogDto;
 import com.codermy.myspringsecurityplus.log.dto.LogQuery;
 import com.codermy.myspringsecurityplus.log.entity.MyLog;
-import com.codermy.myspringsecurityplus.common.utils.Result;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 
 /**
- * @author codermy
- * @createTime 2020/8/4
+ *  * 
  */
 public interface MyLogService {
 

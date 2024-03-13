@@ -7,8 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 /**
- * @author codermy
- * @createTime 2020/8/21
+ *  *
  */
 @Mapper
 public interface UserJobDao {

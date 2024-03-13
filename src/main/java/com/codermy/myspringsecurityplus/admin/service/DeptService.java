@@ -2,13 +2,11 @@ package com.codermy.myspringsecurityplus.admin.service;
 
 import com.codermy.myspringsecurityplus.admin.dto.DeptDto;
 import com.codermy.myspringsecurityplus.admin.entity.MyDept;
-import com.codermy.myspringsecurityplus.common.utils.Result;
 
 import java.util.List;
 
 /**
- * @author codermy
- * @createTime 2020/8/19
+ *  * 
  */
 public interface DeptService {
     /**

@@ -17,8 +17,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author codermy
- * @createTime 2020/8/19
+ *  * 
  */
 @Service
 public class DeptServiceImpl implements DeptService {

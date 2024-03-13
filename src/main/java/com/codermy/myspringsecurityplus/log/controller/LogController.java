@@ -1,14 +1,13 @@
 package com.codermy.myspringsecurityplus.log.controller;
 
 
+import com.codermy.myspringsecurityplus.common.utils.PageTableRequest;
+import com.codermy.myspringsecurityplus.common.utils.Result;
 import com.codermy.myspringsecurityplus.log.aop.MyLog;
 import com.codermy.myspringsecurityplus.log.dto.ErrorLogDto;
 import com.codermy.myspringsecurityplus.log.dto.LogDto;
 import com.codermy.myspringsecurityplus.log.dto.LogQuery;
-
 import com.codermy.myspringsecurityplus.log.service.MyLogService;
-import com.codermy.myspringsecurityplus.common.utils.PageTableRequest;
-import com.codermy.myspringsecurityplus.common.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
- * @author codermy
- * @createTime 2020/8/8
+ *  *
  */
 @Controller
 @RequestMapping("/api")

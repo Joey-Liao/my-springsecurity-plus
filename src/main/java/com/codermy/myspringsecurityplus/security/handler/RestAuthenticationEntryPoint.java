@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author codermy
- * @createTime 2020/8/1
+ *  * 
  * 当未登录或者token失效访问接口时，自定义的返回结果
  */
 @Component

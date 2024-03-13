@@ -3,8 +3,7 @@ package com.codermy.myspringsecurityplus.admin.entity;
 import lombok.Data;
 
 /**
- * @author codermy
- * @createTime 2020/7/10
+ *  * 
  */
 @Data
 public class MyMenu extends BaseEntity{

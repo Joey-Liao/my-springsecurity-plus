@@ -4,8 +4,7 @@ import com.codermy.myspringsecurityplus.admin.entity.MyUser;
 
 /**
  * 用户常量信息
- * @author codermy
- * @createTime 2020/8/21
+ *  *
  */
 public class UserConstants {
     /** 岗位名称是否唯一的返回结果码 */

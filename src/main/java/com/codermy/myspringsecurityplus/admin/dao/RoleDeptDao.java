@@ -7,8 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @author codermy
- * @createTime 2020/8/23
+ *  *
  */
 @Mapper
 public interface RoleDeptDao {

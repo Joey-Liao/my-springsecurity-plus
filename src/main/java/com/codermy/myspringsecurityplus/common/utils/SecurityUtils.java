@@ -12,8 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
 /**
- * @author codermy
- * @createTime 2020/8/4
+ *  * 
  */
 public class SecurityUtils {
 

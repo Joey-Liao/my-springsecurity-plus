@@ -1,8 +1,7 @@
 package com.codermy.myspringsecurityplus.common.utils;
 
 /**
- * @author codermy
- * @createTime 2020/5/15
+ *  *
  * 状态码
  */
 public interface ResultCode {

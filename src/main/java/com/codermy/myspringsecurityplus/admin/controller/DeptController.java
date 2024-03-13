@@ -18,8 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @author codermy
- * @createTime 2020/8/19
+ *  * 
  */
 @Controller
 @RequestMapping("/api/dept")

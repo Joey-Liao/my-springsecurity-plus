@@ -6,8 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author codermy
- * @createTime 2020/8/8
+ *  *
  */
 @Data
 public class LogDto implements Serializable {

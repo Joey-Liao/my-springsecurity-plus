@@ -5,8 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author codermy
- * @createTime 2020/8/21
+ *  *
  */
 @Data
 public class MyUserJob implements Serializable {

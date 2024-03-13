@@ -3,8 +3,7 @@ package com.codermy.myspringsecurityplus.admin.entity;
 import lombok.Data;
 
 /**
- * @author codermy
- * @createTime 2020/8/19
+ *  * 
  */
 @Data
 public class MyDept extends BaseEntity {

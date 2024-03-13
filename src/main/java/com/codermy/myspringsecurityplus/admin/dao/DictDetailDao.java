@@ -13,8 +13,7 @@ import java.util.List;
  *  Mapper 接口
  * </p>
  *
- * @author codermy
- * @since 2020-09-03
+ *  * @since 2020-09-03
  */
 @Mapper
 public interface DictDetailDao {

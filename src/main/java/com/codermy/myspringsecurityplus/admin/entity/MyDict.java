@@ -11,8 +11,7 @@ import lombok.experimental.Accessors;
  * 数据字典
  * </p>
  *
- * @author codermy
- * @since 2020-09-03
+ *  * @since 2020-09-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
